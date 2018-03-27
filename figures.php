@@ -20,9 +20,15 @@ class Elipse extends FlatFigure {
 	
 	public $sizes;
 
-	function __construct($sizes = []){
-		$this->sizes = $sizes;
-	}
+  function __construct($sizes = []) {
+    $this->sizes = $sizes;
+    $count = count($sizes);
+    echo 'Sizes: |';
+    foreach($sizes as $size) {
+    	echo $size . '|' ;
+    }
+    echo "\n";
+  }
 
 	function perimeter() {
 		if ($this->sizes[0] > $this->sizes[1]){
@@ -43,6 +49,8 @@ class Round extends Elipse {
 
   function __construct($radius = 0){
     $this->radius = $radius[0];
+    echo "Radius: $radius[0]";
+    echo "\n";
   }
 
   function perimeter(){
@@ -56,13 +64,19 @@ class Round extends Elipse {
 
 class Polygon extends FlatFigure {
 
-  public $size;
+  public $sizes;
 
-  function __construct($sizes = []){
+  function __construct($sizes = []) {
     $this->sizes = $sizes;
+    $count = count($sizes);
+    echo 'Sizes: |';
+    foreach($sizes as $size) {
+    	echo $size . '|' ;
+    }
+    echo "\n";
   }
 
-  function perimeter(){
+  function perimeter() {
     return array_sum($this->sizes);
   }
 }
@@ -97,9 +111,15 @@ class Triangle extends FlatFigure {
 
 	public $sizes;
 
-	function __construct($sizes = []){
+	function __construct($sizes = []) {
     	$this->sizes = $sizes;
-  	}
+    	$count = count($sizes);
+    	echo 'Sizes: |';
+    	foreach($sizes as $size) {
+    			echo $size . '|' ;
+    }
+    echo "\n";
+  }
 
 	function perimeter(){
 		return array_sum($this->sizes);
@@ -131,6 +151,5 @@ $figures = [[2],
  			[2,2],];
 
 foreach ($figures as $figure) {
-	print_r($figure) . "\n";
 	createFigure($figure);
 	echo "================================ \n";}
