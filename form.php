@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>Пример веб-страницы</title>
+<title>An example of a web page</title>
 </head>
 <body>
   <h1>Анкета</h1>
   <form action="action.php" method="post">
-	<p>Введите ваше имя: <input type="text" name="name"/></p>
-	<p>Ваш возраст: <input type="text" name="age"/></p>
-	<p>Ваш пол:<br/> <input type="radio" name="sex" value="male">Мужской
+	<p>First name: <input type="text" name="name"/></p>
+	<p>Age: <input type="text" name="age"/></p>
+	<p>Gender:<br/> <input type="radio" name="sex" value="male">Мужской
 	<input type="radio" name="sex" value="female">Женский</p>
 	<input type="reset" class="btn btn-default" name="reset button" value="Сбросить данные"/>
 	<input type="submit" class="btn btn-success" value="Отправить данные"/>
